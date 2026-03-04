@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "name": "Biblioteca Centrală",
+    "type": "studiu",
+    "location": "Corpul E, Etaj 1",
+    "program": "08:00 - 20:00",
+    "tags": ["liniște", "cărți", "wifi"]
+  },
+  {
+    "id": 2,
+    "name": "Laborator LMN",
+    "type": "studiu",
+    "location": "Corpul C, Parter",
+    "program": "08:00 - 20:00",
+    "tags": ["calculatoare", "wifi"]
+  },
+  {
+    "id": 3,
+    "name": "Cantina Studențească",
+    "type": "mancare",
+    "location": "UAB, Corp D",
+    "program": "11:30 - 15:00",
+    "tags": ["mâncare caldă", "ieftin", "loc de luat masa"]
+  },
+  {
+    "id": 4,
+    "name": "Bar Universitar",
+    "type": "mancare",
+    "location": "UAB, Parter",
+    "program": "08:00 - 16:00",
+    "tags": ["snacks", "coffee", "loc de luat masa"]
+  },
+  {
+    "id": 5,
+    "name": "Sala de Sport",
+    "type": "sport",
+    "location": "Complex Sportiv UAB",
+    "program": "08:00 - 22:00",
+    "tags": ["sport", "adrenalină"]
+  },
+  {
+    "id": 6,
+    "name": "Sala Fitness",
+    "type": "sport",
+    "location": "Baza Schit",
+    "program": "08:00 - 20:00",
+    "tags": ["fitness", "echipament"]
+  }
+]

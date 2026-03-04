@@ -1,0 +1,361 @@
+:root {
+    --primary: #1e3a8a;
+    --secondary: #0f172a;
+    --accent: #0d9488;
+    --bg-light: #f8fafc;
+    --text-main: #334155;
+    --white: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--bg-light);
+    color: var(--text-main);
+    line-height: 1.6;
+}
+
+/* =========================================
+   HEADER & NAVIGATIE
+   ========================================= */
+header {
+    background-color: var(--secondary);
+    color: var(--white);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: var(--accent);
+}
+
+/* =========================================
+   SECTIUNI HERO & PREZENTARE GENERALA
+   ========================================= */
+#hero {
+    min-height: 90vh;
+    background: linear-gradient(50deg, #1e3a8a, #3b82f6, #1e3a8a);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    padding: 40px 5%;
+}
+
+.presentation-section {
+    padding: 80px 5%;
+    display: flex;
+    gap: 60px;
+    align-items: center;
+}
+
+.hero-container {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    width: 100%;
+}
+
+.hero-text, .presentation-text {
+    flex: 1;
+} 
+
+.hero-text h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.presentation-text h3 {
+    font-size: 2rem;
+    color: var(--primary);
+    margin-bottom: 1.5rem;
+}
+
+/* GALERIE TIP COLAJ */
+.hero-gallery, .presentation-collage {
+    flex: 1.2;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.gallery-col-small {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.gallery-col-small img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.gallery-col-big {
+    flex: 1.2;
+}
+
+.gallery-col-big img {
+    width: 100%;
+    height: 515px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* =========================================
+   COMPONENTE COMUNE (Carduri, Butoane, Tabele)
+   ========================================= */
+
+/* --- Carduri (Resurse și Evenimente) --- */
+.resursa-card, .eveniment-curent, .eveniment-viitor {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    border-top: 4px solid var(--primary);
+}
+
+.resursa-card:hover, .eveniment-curent:hover, .eveniment-viitor:hover {
+    transform: translateY(-10px);
+}
+
+.tag-badge {
+    background: #e2e8f0;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    margin-right: 5px;
+    color: var(--primary);
+    display: inline-block;
+    margin-top: 10px;
+}
+
+/* --- Butoane Generale --- */
+.btn-catalog {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #1e3a8a;
+    border: 2px solid #1e3a8a;
+    border-radius: 8px;
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn-catalog:hover {
+    background-color: #3b82f6;
+    border-color: #3b82f6;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    font-weight: bold;
+}
+
+/* --- Tabele --- */
+.table-container {
+    padding: 60px 5%;
+    background: white;
+}
+
+.styled-table {
+    width: 40%;
+    margin-top: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.styled-table th {
+    background: var(--primary);
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+.styled-table td {
+    padding: 10px;
+    border-bottom: 1px solid #e2e8f0;
+    text-align: center;
+}
+
+.styled-table tr:nth-child(even) {
+    background-color: #f1f5f9;
+}
+
+/* =========================================
+   PAGINA INDEX
+   ========================================= */
+#resurse-container {
+    padding: 60px 5%;
+}
+
+.filter-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+.filter-btn {
+    padding: 10px 25px;
+    border: 2px solid var(--primary);
+    background: transparent;
+    color: var(--primary);
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.filter-btn.active {
+    background: var(--primary);
+    color: white;
+}
+
+#lista-resurse {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 25px;
+}
+
+/* =========================================
+   PAGINA BIBLIOTECA
+   ========================================= */
+#program.info-section {
+    display: flex;
+    flex-direction: column;
+    margin-left: 5%;
+}
+
+/* =========================================
+   PAGINA CANTINA
+   ========================================= */
+.meniu {
+    padding: 5%;
+}
+
+.meniu h2 {
+    font-size: 2rem;
+    color: var(--primary);
+    margin-bottom: 1.5rem;
+}
+
+.meniu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.meniu-grid h3 {
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid var(--accent);
+    color: var(--primary);
+}
+
+.meniu-grid ul {
+    list-style: none;
+}
+
+.meniu-grid li {
+    padding: 5px 0;
+    font-size: 0.95rem;
+}
+
+/* =========================================
+   PAGINA EVENIMENTE
+   ========================================= */
+.page-header {
+    padding: 5%;
+    text-align: center;
+}
+
+.page-header h1 {
+    padding-bottom: 20px;
+}
+
+.social-platforms {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-platforms a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #1e3a8a;
+    font-weight: 500;
+    padding: 15px;
+    transition: 0.3s;
+}
+
+.social-platforms a:hover {
+    color: #0d9488;
+}
+
+.social-platforms img {
+    width: 40px;
+    height: auto;
+}
+
+#evenimente h2 {
+    padding: 20px 5%
+}
+
+#evenimente-azi, #evenimente-viitoare {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 25px;
+    padding: 0 5%;
+}
+
+/* =========================================
+   FOOTER
+   ========================================= */
+footer {
+    background-color: var(--secondary);
+    color: var(--white);
+    padding: 40px 5% 20px;
+    margin-top: 60px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.footer-bottom {
+    text-align: center;
+    border-top: 1px solid #334155;
+    padding-top: 20px;
+    font-size: 0.9rem;
+}

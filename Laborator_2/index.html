@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Info Hub - Acasă</title>
+    <link rel="stylesheet" href="stylesheet.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>Campus Info Hub</h1>
+        <nav>
+            <ul>
+                <li><a href="./index.html">Acasă</a></li>
+                <li><a href="./pages/library.html">Bibliotecă</a></li>
+                <li><a href="./pages/cafeteria.html">Cantină</a></li>
+                <li><a href="./pages/event.html">Evenimente</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero">
+            <div class="hero-container">
+                <div class="hero-text">
+                    <h2>Bine ai venit la Campus!</h2>
+                    <p>Resursele tale esențiale într-un singur loc, explorează facilitățile universității noastre.</p>
+                </div>
+                <div class="hero-gallery">
+                    <div class="gallery-col-small">
+                        <img src="./Images/uab-1.jpg" alt="Mascota UAB">
+                        <img src="./Images/uab-2.jpg" alt="UAB Ceremony">
+                    </div>
+                    <div class="gallery-col-big">
+                        <img src="./Images/universitatea-uab.avif" alt="Universitatea UAB">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="resurse-container">
+            <h2>Explorați Resursele</h2>
+            <div class="filter-wrapper">
+                <button class="filter-btn active" onclick="filterData('toate')">Toate</button>
+                <button class="filter-btn" onclick="filterData('studiu')">Studiu</button>
+                <button class="filter-btn" onclick="filterData('mancare')">Mancare</button>
+                <button class="filter-btn" onclick="filterData('sport')">Sport</button>
+            </div>
+            <div id="lista-resurse">
+                <p>Se încarcă resursele...</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h4>Campus Info Hub</h4>
+            </div>
+            <div class="footer-contact">
+                <h4>Contact</h4>
+                <p>Email: contact@campus-hub.ro</p>
+                <p>Tel: +40 7xx xxx xxx</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Tehnologii WEB - Kiraly Ildiko</p>
+        </div>
+    </footer>
+</body>
+
+</html>
